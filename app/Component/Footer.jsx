@@ -20,114 +20,58 @@ const Footer = () => {
               worldwide.
             </p>
             <div className="flex space-x-4">
-              <Link
-                href="#"
-                className=" hover:text-white transition"
-              >
+              <Link href="#" className=" hover:text-white transition">
                 <Facebook size={20} />
               </Link>
-              <Link
-                href="#"
-                className=" hover:text-white transition"
-              >
+              <Link href="#" className=" hover:text-white transition">
                 <Twitter size={20} />
               </Link>
-              <Link
-                href="#"
-                className=" hover:text-white transition"
-              >
+              <Link href="#" className=" hover:text-white transition">
                 <Instagram size={20} />
               </Link>
-              <Link
-                href="#"
-                className=" hover:text-white transition"
-              >
+              <Link href="#" className=" hover:text-white transition">
                 <Linkedin size={20} />
               </Link>
             </div>
           </div>
 
           <div>
-            <h4 className="text-lg font-semibold mb-4">
-              Quick Links
-            </h4>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-3">
               <li>
-                <Link
-                  href="/"
-                  className=" hover:text-white transition"
-                >
+                <Link href="/" className=" hover:text-white transition">
                   Home
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/talent"
-                  className=" hover:text-white transition"
-                >
-                  Browse Talent
+                <Link href="#about" className=" hover:text-white transition">
+                  About us
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/cast"
-                  className=" hover:text-white transition"
-                >
-                  Casting Calls
+                <Link href="#products" className=" hover:text-white transition">
+                  Products
                 </Link>
               </li>
               <li>
-                <Link
-                  className=" hover:text-white transition"
-                  href={"/post"}
-                >
+                <Link className=" hover:text-white transition" href={"/post"}>
                   Post
                 </Link>
-
               </li>
-              <li>
-                <Link
-                  className=" hover:text-white transition"
-                  href={"/signin"}
-                >
-                  Sign In
-                </Link>
-                
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className=" hover:text-white transition"
-                >
-                  About Us
-                </Link>
-              </li>
+   
+    
             </ul>
           </div>
 
-          <div>
-            <h4 className="text-lg font-semibold  mb-4">Resources</h4>
-            <ul className="space-y-3">
-              <li>
-                <Link
-                  href="/Blog"
-                  className=" hover:text-white transition"
-                >
-                  Blog
-                </Link>
-              </li>
-            </ul>
-          </div>
+
 
           <div>
-            <h4 className="text-lg font-semibold  mb-4">
-              Contact Us
-            </h4>
+            <h4 className="text-lg font-semibold  mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-center space-x-2 ">
                 <Mail size={18} />
                 <span className="overflow-hidden ">
-                  contact@talentconnect.com
+                  afrobillbord@talentconnect.com
                 </span>
               </li>
               <li className="flex items-center space-x-2 ">
@@ -135,7 +79,7 @@ const Footer = () => {
                 <span>+1 (555) 123-4567</span>
               </li>
               <li className=" mt-4">
-                123 Industry Plaza
+                22
                 <br />
                 Ethiopia
               </li>
