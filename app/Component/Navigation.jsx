@@ -12,8 +12,9 @@ function Navigation() {
   };
 
   const navLinks = [
-    { href: "/", text: "Home" },
-    { href: "/post", text: "Companies" },
+    { href: "#hero", text: "Home" },
+    { href: "#about", text: "Products" },
+    { href: "#supplier", text: "Supplier" },
     { href: "https://afro-train.com/", text: "Learn" },
   ];
 
