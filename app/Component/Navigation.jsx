@@ -1,10 +1,9 @@
 "use client";
-import Image from "next/image";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import ToggleButton from "./ToggleButton";
-
+import Searchinput from "./Searchinput";
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -14,8 +13,8 @@ function Navigation() {
 
   const navLinks = [
     { href: "/", text: "Home" },
-    { href: "/post", text: "Post" },
-     { href: "https://afro-train.com/", text: "Learn" },
+    { href: "/post", text: "Companies" },
+    { href: "https://afro-train.com/", text: "Learn" },
   ];
 
   return (
@@ -25,17 +24,32 @@ function Navigation() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex dark:bg-black/90 rounded-xl border-t bg-slate-300 dark:border-white/10 justify-between items-center p-4 md:p-6 bg-slate-500/80 backdrop-blur-sm text-white dark:text-white font-sans max-w-7xl mx-auto"
+          className="flex dark:bg-black/90 rounded-xl border-t bg-cyan-600/20 dark:border-white/10 justify-between items-center p-4 md:p-6  backdrop-blur-sm text-cyan-800 dark:text-white font-sans max-w-7xl mx-auto"
         >
           {/* Logo */}
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link href="/" className="text-xl font-bold">
-             AfroBillbord
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            whileHover={{
+              scale: 1.05,
+              color: "#F3F4F6",
+              textShadow: "0px 0px 8px rgba(255,255,255,0.4)",
+            }}
+            transition={{
+              delay: 0.1 ,
+              duration: 0.4,
+              ease: "easeOut",
+            }}
+            whileTap={{ scale: 0.95 }}
+          >
+            <Link href="/" className="hover:text-white  text-xl ">
+              AfroBillbord
             </Link>
           </motion.div>
+          <Searchinput/>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex gap-6 lg:gap-8 items-center">
+          <div className="hidden md:flex  gap-6 lg:gap-8 items-center">
             {navLinks.map((link, index) => (
               <motion.div
                 key={link.href}
@@ -145,6 +159,7 @@ function Navigation() {
                     whileTap={{ scale: 0.95 }}
                     className="text-xl font-medium"
                   >
+                    
                     <Link
                       href={link.href}
                       onClick={toggleMenu}
@@ -154,6 +169,8 @@ function Navigation() {
                     </Link>
                   </motion.div>
                 ))}
+
+
                 <ToggleButton />
               </div>
             </motion.div>
