@@ -8,7 +8,7 @@ function Hero() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="relative w-full   h-[725px] mx-auto  overflow-hidden shadow-xl"
+      className="relative w-full   h-[745px] mx-auto  overflow-hidden shadow-xl"
     >
       <Image
         src="/hero.png"
@@ -39,14 +39,14 @@ function Hero() {
           The premier platform for wholesale transactions and business
           procurement
         </motion.p>
-        <div className="flex flex-col md:flex-row gap-4">
+{/*         <div className="flex flex-col md:flex-row gap-4">
           <Button color="text-white " className="w-56 px-2 py-3 " bgColor="dark:bg-blue-900 bg-blue-600 hover:bg-blue-700" text>
             View Product
           </Button>{" "}
           <Button className="w-56 px-2 py-3 " color="text-white " bgColor="dark:bg-blue-900 bg-blue-600 hover:bg-blue-700">
             Sell Product
           </Button>
-        </div>
+        </div> */}
       </div>
     </motion.div>
   );
