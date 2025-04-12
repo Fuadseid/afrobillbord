@@ -9,7 +9,7 @@ export default function Home() {
       <CardItem className={"bg-red-200"} translateZ="100px">Hover Me!</CardItem>
     </CardBody>
   </CardContainer>   */
-<div className="pt-10">
+<div className="pt-10 h-full">
 <h1>hey</h1>
 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore expedita tempore corporis sint alias, ratione doloribus maiores? Eaque consequuntur alias voluptates veniam nulla impedit provident necessitatibus. Vel voluptatem tempore quaerat.</p>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam quo perferendis vel voluptatibus expedita dicta iusto praesentium et nobis animi deserunt exercitationem doloribus quae ipsa nihil, a deleniti. Enim, voluptates!

@@ -1,6 +1,6 @@
 function Hero() {
     return (
-        <div>
+        <div className="relative w-full bg-center bg-cover">
             
         </div>
     )
