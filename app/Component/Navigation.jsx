@@ -13,19 +13,20 @@ function Navigation() {
 
   const navLinks = [
     { href: "#hero", text: "Home" },
-    { href: "#about", text: "Products" },
+    { href: "#about", text: "About us" },
+    { href: "#products", text: "Products" },
     { href: "#supplier", text: "Supplier" },
     { href: "https://afro-train.com/", text: "Learn" },
   ];
 
   return (
     <>
-      <div className=" w-full fixed top-4 z-50">
+      <div className=" w-full  fixed top-4 z-50">
         <motion.nav
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex dark:bg-black/20 rounded-xl border-t bg-cyan-600/20 dark:border-white/10 justify-between items-center p-4 md:p-6  backdrop-blur-sm text-cyan-800 dark:text-white font-sans max-w-7xl mx-auto"
+          className="flex dark:bg-black/20 text-base rounded-2xl border-t bg-blue-600/50   dark:border-white/10 justify-between items-center p-6 md:p-10 h-10 backdrop-blur-sm  text-white font-sans max-w-6xl mx-auto"
         >
           {/* Logo */}
           <motion.div
@@ -63,7 +64,7 @@ function Navigation() {
                 }}
                 whileHover={{
                   scale: 1.05,
-                  color: "#F3F4F6",
+                  color: "#ffff",
                   textShadow: "0px 0px 8px rgba(255,255,255,0.4)",
                 }}
                 whileTap={{ scale: 0.95 }}
@@ -180,7 +181,7 @@ function Navigation() {
       </div>
 
       {/* Spacer to prevent content from being hidden behind fixed nav */}
-      <div className="h-20 md:h-24"></div>
+      <div className="h-15 "></div>
     </>
   );
 }

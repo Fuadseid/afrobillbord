@@ -6,10 +6,11 @@
 
 :root {
   /* Slightly Darker Light Theme */
-  --foreground-rgb: 40, 40, 40;                /* Darker text for better contrast */
-  --background-start-rgb: 200, 210, 215;       /* Cool gray (sky-300) */
-  --background-middle-rgb: 190, 240, 250;      /* Soft cyan (cyan-300) */
-  --background-end-rgb: 175, 205, 240;         /* Muted blue (blue-300) */
+  /* Brand Blue Color Palette */
+  --brand-primary: 29, 78, 216;    /* Tailwind's blue-700 - Professional, trustworthy */
+  --brand-secondary: 59, 130, 246; /* Tailwind's blue-500 - Vibrant accent */
+  --brand-accent: 147, 197, 253;   /* Tailwind's blue-300 - Soft highlight */
+       /* Muted blue (blue-300) */
 }
   .dark {
     --foreground-rgb: 30, 30, 30;

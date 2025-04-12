@@ -2,10 +2,10 @@
 
 import { motion } from 'framer-motion';
 
-const Button = ( { children, color = 'text-white', bgColor = 'bg-gradient-to-r dark:bg-gray-500 ' }) => {
+const Button = ( { children,className="px-2 py-3 w-fit", color = 'text-white', bgColor = 'bg-gradient-to-r dark:bg-gray-500 ' }) => {
   return (
     <motion.button
-      className={`px-2 py-3 w-fit rounded-lg font-normal ${color} ${bgColor} shadow-lg`}
+      className={`${className} rounded-lg font-normal ${color} ${bgColor} shadow-lg`}
       whileHover={{
         scale: 1.05,
         boxShadow: '0px 0px 8px rgba(0, 0, 255, 0.5)'
