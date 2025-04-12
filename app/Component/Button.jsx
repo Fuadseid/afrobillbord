@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 
-const Button = ({ text, color = 'text-white', bgColor = 'bg-gradient-to-r dark:bg-gray-500 ' }) => {
+const Button = ( { children, color = 'text-white', bgColor = 'bg-gradient-to-r dark:bg-gray-500 ' }) => {
   return (
     <motion.button
       className={`px-2 py-3 w-fit rounded-lg font-normal ${color} ${bgColor} shadow-lg`}
@@ -20,7 +20,7 @@ const Button = ({ text, color = 'text-white', bgColor = 'bg-gradient-to-r dark:b
         damping: 15
       }}
     >
-      {text}
+      {children}
     </motion.button>
   );
 };

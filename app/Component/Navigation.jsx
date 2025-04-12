@@ -24,7 +24,7 @@ function Navigation() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="flex dark:bg-black/90 rounded-xl border-t bg-cyan-600/20 dark:border-white/10 justify-between items-center p-4 md:p-6  backdrop-blur-sm text-cyan-800 dark:text-white font-sans max-w-7xl mx-auto"
+          className="flex dark:bg-black/20 rounded-xl border-t bg-cyan-600/20 dark:border-white/10 justify-between items-center p-4 md:p-6  backdrop-blur-sm text-cyan-800 dark:text-white font-sans max-w-7xl mx-auto"
         >
           {/* Logo */}
           <motion.div
