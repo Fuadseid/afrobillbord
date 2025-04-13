@@ -4,18 +4,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
 import ToggleButton from "./ToggleButton";
 import Searchinput from "./Searchinput";
+import { usePathname } from "next/navigation";
 function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-
+  const pathname = usePathname();
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
-
   const navLinks = [
-    { href: "#hero", text: "Home" },
-    { href: "#about", text: "About us" },
-    { href: "#products", text: "Products" },
-    { href: "#supplier", text: "Supplier" },
+    {
+      href: pathname === "/" ? "#hero" : "/#hero",
+      text: "Home",
+    },
+    { href: pathname === "/" ? "#about" : "/#about", text: "About us" },
+    { href: pathname === "/" ? "#products" :"/#products", text: "Products" },
+    { href: pathname === "/" ? "#supplier" :"/#supplier", text: "Supplier" },
+    { href: "/Companies", text: "Companies" },
     { href: "https://afro-train.com/", text: "Learn" },
   ];
 
@@ -38,7 +42,7 @@ function Navigation() {
               textShadow: "0px 0px 8px rgba(255,255,255,0.4)",
             }}
             transition={{
-              delay: 0.1 ,
+              delay: 0.1,
               duration: 0.4,
               ease: "easeOut",
             }}
@@ -48,7 +52,7 @@ function Navigation() {
               AfroBillbord
             </Link>
           </motion.div>
-          <Searchinput/>
+          <Searchinput />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex text-sm  gap-6 lg:gap-8 items-center">
@@ -161,7 +165,6 @@ function Navigation() {
                     whileTap={{ scale: 0.95 }}
                     className="text-xl font-medium"
                   >
-                    
                     <Link
                       href={link.href}
                       onClick={toggleMenu}
@@ -171,7 +174,6 @@ function Navigation() {
                     </Link>
                   </motion.div>
                 ))}
-
 
                 <ToggleButton />
               </div>
