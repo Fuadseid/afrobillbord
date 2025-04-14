@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useParams, useRouter } from "next/navigation";
 import { useState } from "react";
 import { companiesData } from "../../data/companiesdata";
-
+import CompanyDetailSection from "./CompanyDetailSection";
 const CompanyDetail = () => {
   const params = useParams();
   const router = useRouter();
@@ -14,9 +14,9 @@ const CompanyDetail = () => {
   const company = companiesData.find((company) => company.id === companyId);
 
   const toggleProductSelection = (product) => {
-    setSelectedProducts(prev => {
-      if (prev.some(p => p.name === product.name)) {
-        return prev.filter(p => p.name !== product.name);
+    setSelectedProducts((prev) => {
+      if (prev.some((p) => p.name === product.name)) {
+        return prev.filter((p) => p.name !== product.name);
       } else {
         return [...prev, product];
       }
@@ -36,7 +36,7 @@ const CompanyDetail = () => {
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <div className="container mx-auto px-4 py-20 pt-28 text-center">
           <h1 className="text-3xl font-bold mb-4">Company Not Found</h1>
-          <button 
+          <button
             onClick={() => router.back()}
             className="text-blue-600 dark:text-blue-400 hover:underline"
           >
@@ -55,13 +55,13 @@ const CompanyDetail = () => {
         transition={{ duration: 0.5 }}
         className="container mx-auto px-4 py-20 pt-28"
       >
-        {/* Back button */}
+
         <motion.div
           whileHover={{ x: -5 }}
           whileTap={{ scale: 0.95 }}
           className="mb-8"
         >
-          <button 
+          <button
             onClick={() => router.back()}
             className="flex items-center text-blue-600 dark:text-blue-400 hover:underline"
           >
@@ -72,7 +72,6 @@ const CompanyDetail = () => {
           </button>
         </motion.div>
 
-        {/* Company Card */}
         <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
@@ -81,7 +80,6 @@ const CompanyDetail = () => {
         >
           <div className="p-8 md:p-10">
             <div className="flex flex-col md:flex-row gap-8">
-              {/* Company Logo */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="flex-shrink-0"
@@ -93,7 +91,6 @@ const CompanyDetail = () => {
                 />
               </motion.div>
 
-              {/* Company Info */}
               <div className="flex-1">
                 <motion.h1
                   className="text-3xl md:text-4xl font-bold mb-2"
@@ -124,7 +121,6 @@ const CompanyDetail = () => {
                   {company.description}
                 </motion.p>
 
-                {/* Company Details */}
                 <motion.div
                   className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8"
                   initial={{ opacity: 0 }}
@@ -149,7 +145,6 @@ const CompanyDetail = () => {
           </div>
         </motion.div>
 
-        {/* Products Section */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -158,8 +153,7 @@ const CompanyDetail = () => {
         >
           <div className="p-8 md:p-10">
             <h2 className="text-2xl font-bold mb-6">Products</h2>
-            
-            {/* Products List */}
+
             <div className="space-y-4">
               {company.products.map((product, index) => (
                 <motion.div
@@ -199,7 +193,6 @@ const CompanyDetail = () => {
               ))}
             </div>
 
-            {/* Order Section */}
             {selectedProducts.length > 0 && (
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -231,7 +224,6 @@ const CompanyDetail = () => {
               </motion.div>
             )}
 
-            {/* Order Confirmation */}
             {orderPlaced && (
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -244,6 +236,57 @@ const CompanyDetail = () => {
           </div>
         </motion.div>
       </motion.main>
+    <CompanyDetailSection
+    company={{
+      name: "ABC Manufacturing",
+      description:
+        "Leading supplier of quality products with 10+ years of experience in the industry.",
+      products: [
+        {
+          id: 1,
+          name: "Premium Cotton T-Shirts",
+          category: "Apparel",
+          price: 4.99,
+          moq: "100 pieces",
+          image: "/images/shirt.jpg",
+        },
+        {
+          id: 2,
+          name: "Wireless Earbuds",
+          category: "Electronics",
+          price: 12.5,
+          moq: "50 pieces",
+          image: "/images/earbuds.jpg",
+        },
+      ],
+      services: [
+        {
+          id: 1,
+          name: "Private Labeling",
+          description: "Custom branding for your products",
+          benefits: [
+            "No minimum order quantity",
+            "Fast turnaround time",
+            "Custom packaging options",
+          ],
+        },
+      ],
+      faqs: [
+        {
+          id: 1,
+          question: "What is your minimum order quantity?",
+          answer:
+            "Our MOQ varies by product but typically starts at 50 units.",
+        },
+        {
+          id: 2,
+          question: "Do you offer international shipping?",
+          answer:
+            "Yes, we ship worldwide with DHL, FedEx, and other major carriers.",
+        },
+      ],
+    }}
+  />
     </div>
   );
 };

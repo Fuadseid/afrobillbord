@@ -14,9 +14,9 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div className="space-y-4">
-            <h3 className="text-2xl font-bold">TalentConnect</h3>
+            <h3 className="text-2xl font-bold">Afribillbord</h3>
             <p>
-              Connecting exceptional talent with casting professionals
+              Connecting exceptional Business
               worldwide.
             </p>
             <div className="flex space-x-4">
